@@ -1,0 +1,46 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content padding style="text-align:center;">
+  <ion-card style="border: solid gray">
+    <h1 style="text-align:center; color:black;">Registrar Usuario</h1>
+  </ion-card>
+  <ion-card style="border: solid gray">
+    <ion-icon name="flash" style="font-size:80px;" color="tertiary"></ion-icon>
+    <h2 style="text-align: center; color:#6b48ea;"><b>Power Sensing</b></h2>
+  
+    <ion-item lines="full" style="font-size:large;">
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input type="text" required [(ngModel)]="Nom_usuario" (ngModelChange)="Verificar()"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" style="font-size:large;">
+      <ion-label position="floating">Id de usuario</ion-label>
+      <ion-input type="number" required [(ngModel)]="Id_usuario"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" style="font-size:large;">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" required [(ngModel)]="NombreU"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" style="font-size:large;">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" required [(ngModel)]="UApellido"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" style="font-size:large;">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" required [(ngModel)]="Passw"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="tertiary" expand="block" style="font-size:large;" (click)="Regis()">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+  
+</ion-card>
+  <ion-button (click)="Regresar()" color="pa">Cancelar</ion-button>
+</ion-content>

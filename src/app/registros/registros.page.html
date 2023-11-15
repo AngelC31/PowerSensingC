@@ -1,0 +1,120 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+    <ion-back-button ></ion-back-button></ion-buttons>
+    <ion-title style="font-weight:bold; color:white;text-align: center;">
+      Registros
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+    <ion-item>
+      <ion-icon name="bulb-outline" slot="start" color="warning"></ion-icon>
+      <ion-label>Focos</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <ion-grid style="text-align:center; font-size:small">
+        <ion-row>
+          <ion-col>Id foco:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="number" [(ngModel)]="Id_Foco" (ngModelChange)="BuscarF()" placeholder="Ejem:'10'"></ion-input></ion-col>
+        </ion-row>
+          <ion-row>
+            <ion-col>Tipo de foco:</ion-col>
+            <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="TipoF" placeholder="Ejem:'B-75W//Led'"></ion-input></ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" size="small" color="secondary" (click)="GFocos()">Guardar</ion-button></ion-col>
+          <ion-col><ion-button expand="block" size="small" color="pa" (click)="BorrarF()">Borrar</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="hardware-chip-outline" slot="start" color="secondary"></ion-icon>
+      <ion-label>Sensores</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-grid style="text-align:center; font-size:small">
+        <ion-row>
+          <ion-col>Id sensor:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="number" [(ngModel)]="Id_Sensor" (ngModelChange)="BuscarS()" placeholder="Ejem:'10'"></ion-input></ion-col>
+        </ion-row>
+          <ion-row>
+            <ion-col>Tipo de sensor:</ion-col>
+            <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="TipoS" placeholder="Ejem:'S-Voltaje'"></ion-input></ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" size="small" color="secondary" (click)="GSensor()">Guardar</ion-button></ion-col>
+          <ion-col><ion-button expand="block" size="small" color="pa" (click)="BorrarS()">Borrar</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-outline" slot="start" color="medium"></ion-icon>
+      <ion-label>Usuarios</ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-grid style="text-align:center; font-size:small">
+        <ion-row>
+          <ion-col>Usuario:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="Nom_usuario" (ngModelChange)="BuscarU()" placeholder="Ejem:'Juan14'"></ion-input></ion-col>
+        </ion-row>
+          <ion-row>
+            <ion-col>Id usuario:</ion-col>
+            <ion-col><ion-input style="border:solid gray" type="number" [(ngModel)]="Id_usuario" placeholder="Ejem:'12'"></ion-input></ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col>Nombre:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="NombreU" placeholder="Ejem:'Juan'"></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Apellido:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="UApellido" placeholder="Ejem:Lopez"></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Contraseña:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="password" [(ngModel)]="Passw" placeholder="Ejem:Casa123"></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><ion-button expand="block" size="small" color="secondary" (click)="Gusuario()">Guardar</ion-button></ion-col>
+          <ion-col><ion-button expand="block" size="small" color="pa" (click)="BorrarU()">Borrar</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="location-outline" slot="start" color="danger"></ion-icon>
+      <ion-label>Ubicaciones</ion-label>
+    </ion-item>
+  
+
+  <ion-card-content>
+    
+    <ion-grid style="text-align:center; font-size:small">
+      <ion-row>
+        <ion-col>Id ubicación:</ion-col>
+        <ion-col><ion-input style="border:solid gray" type="number" [(ngModel)]="Id_ubicaciones" (ngModelChange)="BuscarUbi()" placeholder="Ejem:'10'"></ion-input></ion-col>
+      </ion-row>
+        <ion-row>
+          <ion-col>Ubicación:</ion-col>
+          <ion-col><ion-input style="border:solid gray" type="text" [(ngModel)]="N_Ubicacion" placeholder="Ejem:'Estancia'"></ion-input></ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col><ion-button expand="block" size="small" color="secondary" (click)="GUbi()">Guardar</ion-button></ion-col>
+        <ion-col><ion-button expand="block" size="small" color="pa" (click)="BorrarUbi()">Borrar</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+  </ion-card>
+</ion-content>

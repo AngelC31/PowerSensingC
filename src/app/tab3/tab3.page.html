@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title style="font-weight:bold; color:white;text-align: center;">
+      Ajustes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./avatar.svg" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ejemplo}}</h2>
+      <p>configuración de cuenta</p>
+    </ion-label>
+  </ion-item>
+  <br>
+  <ion-list >
+    <ion-item button>
+      <ion-label>Temas</ion-label>
+      <ion-icon name="color-palette-outline" color="medium" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Notificaciones</ion-label>
+      <ion-icon name="notifications-outline" color="warning" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Sensores</ion-label>
+      <ion-icon name="hardware-chip-outline" color="secondary" slot="start"></ion-icon>
+    </ion-item>
+     <ion-item button>
+      <ion-label>Focos</ion-label>
+      <ion-icon name="bulb-outline" color="warning" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item button >
+      <ion-label>Acerca de</ion-label>
+      <ion-icon name="help" color="danger" slot="start"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  
+</ion-content>
+  
+  <ion-button expand="full" (click)="cerrar()" color="pa" style="color:black;">
+    <ion-icon name="power-outline" slot="start"></ion-icon>
+    Cerrar sesión
+  </ion-button>

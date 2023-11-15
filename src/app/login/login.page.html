@@ -1,0 +1,37 @@
+<ion-content padding style="text-align:center;">
+    <br><br><br><br><br><br>
+    <ion-icon name="flash" style="font-size:80px;" color="tertiary"></ion-icon>
+    <ion-grid >
+      <ion-row justify-content-center >
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center >
+            <h3 style="text-align: center; color:#6b48ea;"><b>Power Sensing</b></h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-icon slot="start" name="person" color="tertiary"></ion-icon>
+              <ion-input name="Usuario:" type="text" [(ngModel)]="usuario" placeholder="Usuario"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon slot="start" name="lock-closed" color="tertiary"></ion-icon>
+              <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="pass"></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button color="pa" size="large" type="submit" expand="block" (click)="validarUsuario()">INICIAR SESION</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row style="text-align:center">
+        <ion-col>
+        <a (click)="IrA()"><u>Crear una cuenta</u></a></ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  <br><br><br><br>
+  <p>{{equipoo}}</p>
+  <ion-button color="null" border="null" style="color:#6b48ea;" (click)="nombres()">
+    <ion-icon slot="start" name="information-circle-outline" color="pa"></ion-icon>
+    Equipo
+  </ion-button>
+</ion-content>
